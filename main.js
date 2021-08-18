@@ -1,5 +1,5 @@
 
-var canvas=('Mycanvas')
+var canvas = new fabric.Canvas('myCanvas');
  block_y=1;
  block_x=1;
 
@@ -11,7 +11,7 @@ function new_image(get_image)
 
 {
 
-fabric.js.Image.fromURL(get_image, function (Img) {
+fabric.Image.fromURL(get_image, function (Img) {
 
 block_image_object = Img; 
 block_image_object.scaleToWidth (block_image_width);
@@ -28,7 +28,7 @@ canvas.add(block_image_object); });
 }
 
 
-
+window.addEventListener("keydown", my_keydown);
 function my_keydown(e)
 {
 keyPressed = e.keyCode;
@@ -38,41 +38,39 @@ console.log(keyPressed);
 	if(keyPressed == '82') 
 	{
 		block_x = 150;
-		window.addEventListener("keydown", my_keydown);
-
-	new_image(rr.jpg);
-		console.log(r)
+		
+	new_image("rr.jpg");
+		console.log("r")
 	}
 	if(keyPressed == '71')
 	{
-		block_x = 200;
-		window.addEventListener("keydown", my_keydown);
-
-		new_image(gr.png);
-		console.log(g)
+		block_x = 30;
+		
+		new_image("gr.png");
+		console.log("g")
 	}
 	
 	if(keyPressed == '89')
 	{
 		block_x =350;
-		window.addEventListener("keydown", my_keydown);
+		
 
-		new_image(yr.png);
-		console.log(y)
+		new_image("yr.png");
+		console.log("y")
 	}
 	if(keyPressed == '80')
 	{
 		block_x = 600;
-		window.addEventListener("keydown", my_keydown);
+		
 
-		new_image(pr.png);
-		console.log(p)
+		new_image("pr.png");
+		console.log("p")
 	}
 	if(keyPressed == '66')
 	{
 		block_x = 700;
-	new_image(br.png);
-	console.log  ()
+	new_image("br.png");
+	console.log("b")
 	}
 	
 }
